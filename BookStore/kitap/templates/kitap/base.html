@@ -39,7 +39,8 @@
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="{% url 'profile' %}">
             <span>
-              KITAP
+              {{ request.user }} 
+              <a class="logout-text" href="{% url 'logout' %}">Logout</a>
             </span>
           </a>
 

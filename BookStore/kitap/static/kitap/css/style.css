@@ -5,7 +5,16 @@ body {
   background-color: #ffffff;
   overflow-x: hidden;
 }
-
+.logout-text {
+  text-decoration: none;
+  font-size: 16px;
+  margin-bottom: -6px;
+  margin-left: 15px;
+  color: wheat;
+}
+.logout-text:hover {
+  color: rgb(242, 181, 107);
+}
 .layout_padding {
   padding: 90px 0;
 }
