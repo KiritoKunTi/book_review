@@ -2,6 +2,7 @@ from django.shortcuts import redirect, render
 from .forms import CustomRegisterForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from .models import *
 
 # Create your views here.
 def authentication(request):
@@ -50,4 +51,5 @@ def profile(request):
 
 @login_required(login_url='authentication')
 def faq(request):
-    return render(request, 'kitap/faq.html')
+    faq = Faq.objects.all()
+    return render(request, 'kitap/faq.html', {'faq': faq,})
